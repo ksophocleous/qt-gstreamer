@@ -8,10 +8,12 @@ target_link_libraries(QtGStreamerQuick2
 	${QTGSTREAMER_QUICK_LIBRARIES}
 	)
 
-set_target_properties(QtGStreamerQuick2 PROPERTIES
-	PREFIX ""
-#	IMPORT_PREFIX ""
-	)
+if(WIN32)
+	set_target_properties(QtGStreamerQuick2 PROPERTIES
+		PREFIX ""
+	#	IMPORT_PREFIX ""
+		)
+endif()
 
 #qt4or5_use_modules(QtGStreamerQuick2 Qml)
 message(STATUS "QTGSTREAMER_QUICK_LIBRARIES: ${QTGSTREAMER_QUICK_LIBRARIES}")
