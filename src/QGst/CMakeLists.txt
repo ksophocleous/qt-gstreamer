@@ -88,7 +88,7 @@ set(QtGStreamer_INSTALLED_HEADERS
     buffer.h            Buffer
     sample.h            Sample
     allocator.h         Allocator
-    memory.h            Memory
+    gmemory.h           GMemory
     event.h             Event
     clocktime.h         ClockTime
     taglist.h           TagList

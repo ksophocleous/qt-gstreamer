@@ -20,7 +20,7 @@
 
 #include "global.h"
 #include "object.h"
-#include "memory.h"
+#include "gmemory.h"
 
 namespace QGst {
 

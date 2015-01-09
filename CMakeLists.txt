@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 2.8.11)
 enable_testing()
 
 cmake_policy(SET CMP0045 OLD)
+cmake_policy(SET CMP0042 NEW)
 
 SET(CMAKE_DEBUG_POSTFIX "d")
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
