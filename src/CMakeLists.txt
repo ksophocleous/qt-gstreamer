@@ -62,7 +62,7 @@ add_subdirectory(qml)
 # Install the cmake scripts that are used to find the installed library from external projects
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
-    ${CMAKE_SOURCE_DIR}/cmake/modules/QtGStreamerConfig.cmake.in
+    ${CMAKE_CURRENT_SOURCE_DIR}/../cmake/modules/QtGStreamerConfig.cmake.in
     ${CMAKE_CURRENT_BINARY_DIR}/${QTGSTREAMER_PACKAGE_NAME}Config.cmake
     INSTALL_DESTINATION ${QTGSTREAMER_CMAKE_CONFIG_INSTALL_DIR}
     PATH_VARS QTGSTREAMER_INCLUDES_INSTALL_DIR
@@ -74,7 +74,7 @@ write_basic_package_version_file(
 install(EXPORT ${EXPORT_TARGET_SET} DESTINATION ${QTGSTREAMER_CMAKE_CONFIG_INSTALL_DIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QTGSTREAMER_PACKAGE_NAME}Config.cmake
               ${CMAKE_CURRENT_BINARY_DIR}/${QTGSTREAMER_PACKAGE_NAME}ConfigVersion.cmake
-              ${CMAKE_SOURCE_DIR}/cmake/modules/QtGStreamerConfigCommon.cmake
+              ${CMAKE_CURRENT_SOURCE_DIR}/../cmake/modules/QtGStreamerConfigCommon.cmake
         DESTINATION ${QTGSTREAMER_CMAKE_CONFIG_INSTALL_DIR})
 
 # Install pkgconfig files

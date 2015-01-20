@@ -76,7 +76,7 @@ set(QWIDGETVIDEOSINK_NAME qwidget5videosink)
 set(QT_QML_DIR "${CMAKE_INSTALL_PREFIX}/share/qt5/qml")
 set(GSTREAMER_PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/lib/gstreamer-1.0")
 
-set(QTGSTREAMER_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/src)
+set(QTGSTREAMER_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 include(QtGStreamerConfigCommon)
 
 find_package(GStreamer 1.0.0 COMPONENTS base)
@@ -193,7 +193,7 @@ if (QTGSTREAMER_EXAMPLES)
 endif()
 
 # Add uninstall target. Taken from the KDE4 scripts
-configure_file("${CMAKE_SOURCE_DIR}/cmake/modules/cmake_uninstall.cmake.in" "${CMAKE_BINARY_DIR}/cmake_uninstall.cmake" @ONLY)
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/cmake_uninstall.cmake.in" "${CMAKE_BINARY_DIR}/cmake_uninstall.cmake" @ONLY)
 add_custom_target(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_BINARY_DIR}/cmake_uninstall.cmake")
 
 # Add doc target
