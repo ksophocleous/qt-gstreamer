@@ -18,6 +18,7 @@
 #include "../QGlib/init.h"
 #include "../QGlib/error.h"
 #include <gst/gst.h>
+#include <gst/gstregistry.h>
 
 namespace QGst {
 
@@ -45,6 +46,13 @@ void init(int *argc, char **argv[])
 void cleanup()
 {
     gst_deinit();
+}
+
+void addPluginsSearchPath(const char* fullPath)
+{
+    GstRegistry* registry = gst_registry_get();
+    if (registry != nullptr)
+        gst_registry_scan_path(registry, fullPath);
 }
 
 } //namespace QGst

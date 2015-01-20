@@ -50,6 +50,8 @@ namespace QGst {
      */
     QTGSTREAMER_EXPORT void cleanup();
 
+    QTGSTREAMER_EXPORT void addPluginsSearchPath(const char* fullPath);
+
 } //namespace QGst
 
 #endif //QGST_INIT_H
